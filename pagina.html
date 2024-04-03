@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/css.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <title>casa de cambio</title>
+</head>
+<body>
+    <nav>
+        <div class="btn-group">
+
+            <button id="Dark" class="btn">Dark Mode</button>
+
+        </div>
+    </nav>
+    <article class="article">
+        <form class="form">
+            <h1>CASA DE CAMBIO</h1>
+            <p>Seleccionar moneda</p>
+            <input type="radio" name="cambio" id="dolar">Dolar
+            <input type="radio" name="cambio" id="euro">Euro
+            <p>Ingresar monto en pesos</p>
+            <input type="number" id="monto" min="1" max="100000000"><br><br>
+            <input type="button" id="cotizador" value="Cotizar" onclick="convertir()">
+            <div class="total">
+                <h2>Total: <span id="total">$0</span></h2>
+            </div>
+        </form>
+       
+    </article>
+  
+
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="convertedPrice"></p>
+        </div>
+    </div>
+
+    <script src="./javascrip/js.js"></script>
+</body>
+</html>
