@@ -1,61 +1,83 @@
-*{
+* {
     box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    font-family: roboto;
-}
-body{
-    background: #b9bbbc;
-}
-.article{
-        display: grid;
-        justify-content: center;
-        align-items: center;
-        padding-top: 4rem;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
     
 }
 
-.form{
-    border: black 1px solid;
+body {
+    background: #061c28; /* Cambia el color de fondo a azul noche */
+    color: #27fe41; /* Cambia el color del texto a blanco */
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 20px;
+}
+
+/* Estilos para el artículo */
+.article {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4rem;
+}
+
+/* Estilos para el formulario */
+.form {
+    border: 1px solid #000; /* Cambia el borde a negro */
     border-radius: 20px;
     text-align: center;
+    background-color: #0e3344; /* Cambia el fondo del formulario a azul noche */
+    padding: 2rem; /* Aumenta el espaciado interno */
 }
 
-h1{
+/* Estilo para el placeholder del input */
+#monto {
+    width: 80%;
+    padding: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: #0e3344; /* Cambia el fondo del input a azul noche */
+    color: #fff; /* Cambia el color del texto a blanco */
+    border: 1px solid #000; /* Cambia el borde a negro */
+}
+
+h1, p {
     padding: 1rem;
+    color: #fff; /* Cambia el color del texto a blanco */
 }
 
-p{
-    padding: 1rem;
-}
-
-#cotizador{
+#cotizador {
     padding: 0.5rem;
     margin: 1rem;
-}
-.total-tittle{
-    padding: 0.5rem;
+    background-color: #0e3344; /* Cambia el fondo del botón a azul noche */
+    color: #fff; /* Cambia el color del texto a blanco */
+    border: 1px solid #000; /* Cambia el borde a negro */
 }
 
-/* modal cfg */
+.total-tittle {
+    padding: 0.5rem;
+    color: #fff; /* Cambia el color del texto a blanco */
+}
+
+/* Modal */
 .modal {
-    display:none;
-    position:fixed;
+    display: none;
+    position: fixed;
     z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-content {
     background-color: #fefefe;
-    margin:15% auto;
-    padding:20px;
-    border: 1px solid #888;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #000; /* Cambia el borde a negro */
     width: 25%;
 }
 
@@ -67,9 +89,9 @@ p{
 }
 
 .close:hover, .close:focus {
-    color: #ffffff;
+    color: #fff; /* Cambia el color del texto a blanco */
     text-decoration: none;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .btn-group {
@@ -78,26 +100,20 @@ p{
     margin-top: 1.5rem;
     flex-wrap: wrap;
 }
+
 .btn-group .btn {
     border: 0;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     cursor: pointer;
-    background-color: rgb(255, 255, 255);
-  }
-  .btn-group .btn:hover {
+    background-color: #0e3344; /* Cambia el fondo del botón a azul noche */
+    color: #fff; /* Cambia el color del texto a blanco */
+}
+
+.btn-group .btn:hover {
     background-color: #3d3a3b;
 }
 
-body {
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  body.dark-mode {
-    background-color: #252425;
-    color: white;
-  }
-  
-  p {
-    margin-top: 2rem;
-  }
+.dark-mode .btn-group .btn {
+    background-color: #100f2c; /* Cambia el fondo del botón oscuro a azul noche más oscuro */
+}
